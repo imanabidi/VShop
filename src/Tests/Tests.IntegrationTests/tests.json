@@ -34,6 +34,11 @@
         "Postgres": {
             "ConnectionString": "server=localhost;userid=postgres;password=ktd7yfDHHzAGL77Za7Eq;port=5441;database=VShop_BillingTests;application name=VShop_BillingTests;"
         },
+        "Stripe": {
+            "PublishableKey": "pk_test_integration",
+            "SecretKey": "sk_test_integration",
+            "WebhookSecret": "whsec_test_integration"
+        },
         "Module": {
             "Name": "Billing",
             "Enabled": true
