@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <AssemblyName>VShop.Modules.Sales.Infrastructure</AssemblyName>
+        <RootNamespace>VShop.Modules.Sales.Infrastructure</RootNamespace>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\SharedKernel\SharedKernel.EventSourcing\SharedKernel.EventSourcing.csproj" />
+      <ProjectReference Include="..\..\..\SharedKernel\SharedKernel.PostgresDb\SharedKernel.PostgresDb.csproj" />
+      <ProjectReference Include="..\..\Billing\Modules.Billing.Integration\Modules.Billing.Integration.csproj" />
+      <ProjectReference Include="..\..\Catalog\Modules.Catalog.Integration\Modules.Catalog.Integration.csproj" />
+      <ProjectReference Include="..\Modules.Sales.Domain\Modules.Sales.Domain.csproj" />
+      <ProjectReference Include="..\Modules.Sales.Integration\Modules.Sales.Integration.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="VShop.Modules.Sales.Tests" />
+        <InternalsVisibleTo Include="VShop.Tests.IntegrationTests" />
+        <InternalsVisibleTo Include="VShop.Modules.Sales.API" />
+    </ItemGroup>
+
+</Project>

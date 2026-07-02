@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Infrastructure.Commands";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/gender.proto";
+
+message SetContactInformationCommand 
+{
+    Uuid shopping_cart_id = 1;
+	string first_name = 2;
+	string middle_name = 3;
+	string last_name = 4;
+	string email_address = 5;
+	string phone_number = 6;
+	Gender gender = 7;
+}

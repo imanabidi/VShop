@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Infrastructure.Commands";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+
+message DeleteShoppingCartCommand 
+{
+    Uuid shopping_cart_id = 1;
+}

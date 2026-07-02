@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Infrastructure.Commands";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+import "Modules/Sales/_schemas/Commands/shopping_cart_product_command_dto.proto";
+
+message AddShoppingCartProductCommand 
+{
+    Uuid shopping_cart_id = 1;
+    ShoppingCartProductCommandDto shopping_cart_item = 2;
+}

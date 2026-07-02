@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Integration.Events";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+import "google/type/money.proto";
+
+message OrderStatusSetToPaidIntegrationEvent 
+{
+	Uuid order_id = 1;
+	repeated OrderLine order_lines = 2;
+	
+	message OrderLine 
+	{
+		Uuid product_id = 1;
+		int32 quantity = 2;
+		google.type.Money price = 3;
+	}
+}

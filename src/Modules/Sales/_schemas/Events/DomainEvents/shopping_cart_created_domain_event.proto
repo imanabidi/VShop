@@ -1,0 +1,11 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Domain.Events";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+
+message ShoppingCartCreatedDomainEvent 
+{
+    Uuid shopping_cart_id = 1;
+    Uuid customer_id = 2;
+    int32 customer_discount = 3;
+}

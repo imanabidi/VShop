@@ -1,0 +1,12 @@
+﻿syntax = "proto3";
+option csharp_namespace = "VShop.Modules.Sales.Infrastructure.Commands.Shared";
+
+import "SharedKernel/SharedKernel.Infrastructure/_schemas/uuid.proto";
+import "google/type/money.proto";
+
+message ShoppingCartProductCommandDto
+{
+    Uuid product_id = 1;
+    google.type.Money unit_price = 2;
+    int32 quantity = 3;
+}
