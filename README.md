@@ -192,11 +192,24 @@ List of features:
 
 ### Install .NET 10
 Download and install .NET 10 SDK.
+
 ### Run using Docker Compose
-You can run whole application using docker compose from root folder:
+The Docker Compose configuration is in the `devops` folder and uses values from a `.env` file. Before running it for the first time, copy the template and update the values as needed:
 
 ```shell
-docker-compose up
+copy devops\.env.tmp devops\.env
+```
+
+Then start the infrastructure from the repository root:
+
+```shell
+docker compose --env-file devops/.env -f devops/docker-compose.yml up -d
+```
+
+Alternatively, change into the `devops` folder and run:
+
+```shell
+docker compose up -d
 ```
 
 It will create the following services (separate for testing and development):
